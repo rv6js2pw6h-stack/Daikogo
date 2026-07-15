@@ -1521,6 +1521,22 @@ footer { background: #000; border-top: 1px solid #1c1c1c; padding: 3.5rem 2rem 2
   .how-grid { grid-template-columns: 1fr; }
   .feat-grid { grid-template-columns: 1fr; }
 }
+
+/* ══════ MOBILE TOPBAR — évite le débordement / effet "zoomé" ══════ */
+@media(max-width:560px) {
+  #topbar { padding: 0.8rem 0.9rem; }
+  .logo { font-size: 1.3rem; }
+  .topbar-right { gap: 0.35rem; }
+  .tb-btn { padding: 0.44rem 0.7rem; font-size: 0.73rem; }
+  /* Bouton "Chauffeurs" → icône 🚗 seule */
+  .topbar-right > a.tb-btn span { display: none; }
+  .topbar-right > a.tb-btn { padding: 0.44rem 0.6rem; }
+  /* Barre connecté : Messages / Mes courses → icône seule, nom masqué */
+  #usr-bar .tb-btn.hist span { display: none; }
+  #usr-bar .tb-btn.hist { padding: 0.44rem 0.6rem; }
+  #usr-name { display: none; }
+  .avatar-circle { width: 30px; height: 30px; }
+}
 </style>
 </head>
 <body>
